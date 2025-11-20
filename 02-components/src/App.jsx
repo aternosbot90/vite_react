@@ -35,23 +35,30 @@
 // export default App
  import React from 'react'
  import Card from './components/Card'
+ import NavBar from './components/NavBar'
  
  const App = () => {
    return (
     <div>
-     <div className="card">
-      <h1>Hello World</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa tempore similique odio suscipit soluta, eius dignissimos veniam explicabo maiores temporibus?</p>
-     </div>
-       <div className="card">
-      <h1>Hello World</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa tempore similique odio suscipit soluta, eius dignissimos veniam explicabo maiores temporibus?</p>
-     </div>
-     {Card()}
-     <br />
-     <br />
-     <Card/>
+        <NavBar />
+        <NavBar />
+      <Card />
+      <Card />
+      
     </div>
+    // props drilling
+
+    // <div>
+     
+    //    <div className="card">
+    //   <h1>Hello World</h1>
+    //   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa tempore similique odio suscipit soluta, eius dignissimos veniam explicabo maiores temporibus?</p>
+    //  </div>
+    //  {Card()}
+    //  <br />
+    //  <br />
+    //  <Card/>
+    // </div>
    )
  }
  
