@@ -1,6 +1,7 @@
 import React from 'react'
 import {Bookmark} from 'lucide-react'
 import Card from './components/card.jsx'
+import Video from './components/video.jsx'
 
 const App = () => {
       const jobs = [
@@ -118,6 +119,7 @@ const App = () => {
   console.log(jobs)
   return (
     <div className="parent">
+      <Video />
       {jobs.map(function(elems){
         return <Card company={elems.company} logo={elems.logo} posted={elems.posted} role={elems.role} type={elems.type} level={elems.level} salary={elems.salary} location={elems.location} />
       })}
