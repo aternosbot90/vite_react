@@ -25,6 +25,7 @@ video{
   padding: 30px;
   gap: 30px;
   min-height: 100vh;
+  justify-content: center;
   width: 100%;
   flex-wrap: wrap;
   /* background-color: black; */
