@@ -1,39 +1,46 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import Shimmer from './components/Shimmer'
+import Card from './components/Card'
+import Button from './components/Button'
 
 const App = () => {
 
-  const [userData, setUserData] = React.useState([])
+  const [userData, setUserData] = useState([])
+
+  const [index ,setIndex] = useState(1)
 
   const getData = async ()=>{
-    const res = await axios.get('https://picsum.photos/v2/list?page=3&limit=30') //post we use to send data to backend into database
+    const res = await axios.get(`https://picsum.photos/v2/list?page=${index}&limit=10`) //post we use to send data to backend into database
     console.log(res.data)
     setUserData(res.data)
-    
   }
 
-  let printUserData = 'No User Available'
+  useEffect(function(){
+     getData()
+  },[index])
+
+  let printUserData = <h3 className='text-grey-400 text-xs'><Shimmer /></h3>
   if(userData.length>0){
     printUserData = userData.map(function(elem,idx){
-      return <div>
-        <div className='h-40 w-44 overflow-auto bg-white rounded-xl'>
-        <img className='h-full w-full object-cover' src={elem.download_url} alt="" />
-      </div>
-      <h2>{elem.author}</h2>
+      return <div key={idx}>
+          <Card elem={elem} />
       </div>
     })
   }
   
   return (
     <div className='bg-black p-4 overflow-auto h-screen text-white'>
-     <button
+     <h1 className='fixed text-6xl bg-red-500'>{index}</h1>
+     {/* <button
      onClick={getData}
       className='bg-green-600 mb-3 px-5 active:scale-95 py-2 rounded text-white'>
         Get data
-        </button>
-        <div className='flex flex-wrap gap-4'>
+        </button> */}
+        <div className='flex flex-wrap justify-center gap-4 p-2'>
           {printUserData}
         </div>
+        <Button index={index} setIndex={setIndex} setUserData={setUserData} />
     </div>
   )
 }

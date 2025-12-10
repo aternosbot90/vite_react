@@ -1,0 +1,25 @@
+@import "tailwindcss";
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+} */
+
+h1{
+  font-size: 100px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: underline;
+  font-weight: 600;
+  white-space: nowrap;
+}
