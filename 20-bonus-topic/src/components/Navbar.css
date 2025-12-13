@@ -1,0 +1,53 @@
+/* Light Theme */
+body{
+  transition: all 0.5s ease;
+}
+
+body[data-theme="light"] .navbar {
+  background-color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+body[data-theme="light"] .theme-btn {
+  background-color: #f9f9f9;
+  color: #213547;
+  border: 2px solid #646cff;
+  transition: all 0.5s ease;
+}
+
+/* Dark Theme */
+body[data-theme="dark"] .navbar {
+  background-color: #1a1a1a;
+  transition: all 0.5s ease;
+}
+
+body[data-theme="dark"] .theme-btn {
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+  border: 2px solid #646cff;
+  transition: all 0.5s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  transition: background-color 0.5s ease;
+}
+
+.theme-btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.theme-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-btn:active {
+  transform: scale(0.95);
+}
