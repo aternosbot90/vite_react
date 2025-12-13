@@ -22,4 +22,5 @@ h1{
   text-decoration: underline;
   font-weight: 600;
   white-space: nowrap;
+  text-transform: capitalize;
 }
