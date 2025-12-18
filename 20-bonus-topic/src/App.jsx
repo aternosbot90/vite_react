@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Navbar from './components/Navbar.jsx'
+import Button from './components/Button.jsx'
 
 const App = () => {
     const [theme, setTheme] = useState('light')
@@ -20,7 +20,7 @@ const App = () => {
   return (
     <div className="container">
       <h1>Current Theme: {theme}</h1>
-      <Navbar theme={theme} changeTheme={changeTheme} />
+      <Button theme={theme} changeTheme={changeTheme} />
     </div>
   )
 }

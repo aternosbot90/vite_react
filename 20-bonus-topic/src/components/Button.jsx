@@ -1,14 +1,14 @@
 import React from 'react'
-import './Navbar.css'
+import './Button.css'
 
-const Navbar = ({ theme, changeTheme }) => {
+const Button = ({ theme, changeTheme }) => {
   return (
     <nav className="navbar">
       <button onClick={changeTheme} className="theme-btn">
-        {theme === 'light' ? '🌙' : '🌞'} Change Theme
+        {theme === 'light' ? '🌙' : '☀️'} Change Theme
       </button>
     </nav>
   )
 }
 
-export default Navbar
+export default Button
