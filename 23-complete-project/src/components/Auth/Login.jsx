@@ -10,6 +10,8 @@ const Login = () => {
         console.log("email is : ",email);
         console.log("password is : ",password);
         
+        setEmail("")
+        setPassword("")
            
   }
 
