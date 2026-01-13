@@ -1,8 +1,40 @@
+// this is my data 
+
+// const employees = [
+  
+//     { "id": 1, "email": "employee1@company.com", "password": "123" },
+//     { "id": 2, "email": "employee2@company.com", "password": "123" },
+//     { "id": 3, "email": "employee3@company.com", "password": "123" },
+//     { "id": 4, "email": "employee4@company.com", "password": "123" },
+//     { "id": 5, "email": "employee5@company.com", "password": "123" }
+
+// ]
+
+// const admin = [
+
+// {
+//     "id": 1,
+//     "email": "admin@company.com",
+//     "password": "123"
+//   }
+
+
+// ]
+
+// do one thing, give each employee a task array with 3-10 task with properties like active (true or false), new Task (true or false), completed(true or false), failed(true or false) and task title, task description, task date, category
+
 const employees = [
   {
     id: 1,
+    firstName: "Amit",
     email: "employee1@company.com",
     password: "123",
+    taskCount: {
+      active: 1,
+      newTask: 1,
+      completed: 1,
+      failed: 0
+    },
     tasks: [
       {
         title: "Prepare Sales Report",
@@ -39,8 +71,15 @@ const employees = [
 
   {
     id: 2,
+    firstName: "Rahul",
     email: "employee2@company.com",
     password: "123",
+    taskCount: {
+      active: 2,
+      newTask: 1,
+      completed: 1,
+      failed: 1
+    },
     tasks: [
       {
         title: "Bug Fixing",
@@ -77,8 +116,15 @@ const employees = [
 
   {
     id: 3,
+    firstName: "Priya",
     email: "employee3@company.com",
     password: "123",
+    taskCount: {
+      active: 3,
+      newTask: 1,
+      completed: 1,
+      failed: 0
+    },
     tasks: [
       {
         title: "Design Homepage",
@@ -115,8 +161,15 @@ const employees = [
 
   {
     id: 4,
+    firstName: "Vikas",
     email: "employee4@company.com",
     password: "123",
+    taskCount: {
+      active: 1,
+      newTask: 1,
+      completed: 1,
+      failed: 0
+    },
     tasks: [
       {
         title: "Inventory Check",
@@ -153,8 +206,15 @@ const employees = [
 
   {
     id: 5,
+    firstName: "Neha",
     email: "employee5@company.com",
     password: "123",
+    taskCount: {
+      active: 1,
+      newTask: 1,
+      completed: 1,
+      failed: 1
+    },
     tasks: [
       {
         title: "Social Media Post",
@@ -193,10 +253,12 @@ const employees = [
 const admin = [
   {
     id: 1,
+    firstName: "Suresh",
     email: "admin@company.com",
     password: "123"
   }
 ];
+
 
 
 export const setLocalStorage = ()=>{
@@ -208,7 +270,9 @@ export const getLocalStorage = ()=>{
  const employees = JSON.parse(localStorage.getItem('employees'))
  const admin = JSON.parse(localStorage.getItem('admin'))
 
- console.log(employees,admin);
+//  console.log(employees,admin);
+
+return{employees,admin}
  
 //  console.log(JSON.parse(data));
 }
