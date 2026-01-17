@@ -16,7 +16,7 @@ const searchSlice = createSlice({
         setActiveTabs(state,action){
             state.activeTab = action.payload
         },
-        setLoadig(state){
+        setLoading(state){
             state.loading = true
             state.error = null
         },
