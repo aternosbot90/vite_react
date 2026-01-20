@@ -54,9 +54,9 @@ const ResultGrid = () => {
       return <h1>Loading...</h1>
     }
     return (
-    <div className='flex justify-center flex-wrap gap-6 overflow-auto px-10'>
+    <div className='flex h-auto justify-center flex-wrap gap-6 overflow-auto px-10'>
       {results.map((item)=>{
-          return <div key={item.id}>
+          return <div className='h-auto' key={item.id}>
             <ResultCard item={item}/>
           </div>
       })}

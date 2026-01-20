@@ -13,3 +13,7 @@ body{
   background-color: black;
   color: white;
 }
+
+#bottom{
+  background:linear-gradient(transparent,black);
+}
