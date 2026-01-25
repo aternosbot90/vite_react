@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import {fetchPhotos,fetchVideos} from '../api/mediaApi'
+import {fetchPhotos,fetchVideos,fetchGifs} from '../api/mediaApi'
 import { setQuery,setLoading,setError,setResults } from '../redux/features/searchSlice'
 import { useDispatch,useSelector } from 'react-redux'
 import ResultCard from './ResultCard'
@@ -38,6 +38,17 @@ const ResultGrid = () => {
             }))
             console.log(data);
         }
+          if(activeTab === 'gifs'){
+            let response = await fetchGifs(query)
+            data = response.results.map((item)=>({
+                id:item.id,
+                type:'gif',
+                title: item.title,
+                thumbnail: item.media_formats.gif.url,
+                src: item.media_formats.gif.url,
+            }))
+            console.log(data);
+          }
         dispatch(setResults(data))
         }
         catch(err){

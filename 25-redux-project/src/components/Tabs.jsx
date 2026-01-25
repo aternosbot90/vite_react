@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 
 const Tabs = () => {
 
-    const tabs = ['photos','videos']
+    const tabs = ['photos','videos','gifs']
 
     const dispatch = useDispatch()
 
