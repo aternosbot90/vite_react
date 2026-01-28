@@ -22,9 +22,9 @@ const ResultGrid = () => {
                  type:'photo',
                  title: item.alt_description,
                  thumbnail: item.urls.small,
-                 src: item.urls.full,
+                 src: item.urls.small,
             }))
-            console.log(data);
+            console.log(response.results);
               
         }
           if(activeTab === 'videos'){
